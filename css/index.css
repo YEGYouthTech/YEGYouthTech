@@ -1,0 +1,155 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.section-hero {
+    width: 100%;
+    height: 100vh;
+}
+
+.section-hero .bg {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    background: url("https://familyofficenetworks.com/wp-content/uploads/2020/11/techR.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0 var(--translateY);
+    filter: brightness(0.8);
+}
+
+.section-hero .bg-overlay {
+    background: linear-gradient(0deg, rgba(0, 0, 0, .6) 10%, rgba(0, 0, 0, .2) 40%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 100%);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    height: 100%;
+}
+
+.section-hero .catchphrase {
+    font-size: 5rem;
+    margin: 12rem auto auto 0;
+    color: #FFFFFF;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-weight: 400;
+}
+
+.section-hero .catchphrase::after {
+    content: '';
+    width: 2px;
+    height: 0;
+    display: block;
+    position: absolute;
+    margin-top: 2rem;
+    left: 50%;
+    background: rgba(200, 200, 200, 0.6);
+    transform-origin: top;
+    -webkit-transition: all 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -moz-transition: all 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -ms-transition: all 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -o-transition: all 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: all 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition-delay: 1s;
+}
+
+.section-hero .catchphrase.aos-animate::after {
+    height: 8rem;
+}
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(101%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.section-hero .catchphrase.aos-animate .word {
+    display: inline-block;
+    animation: slide-up 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s both;
+    animation-delay: calc(200ms * var(--index) + 200ms);
+}
+
+.section-hero .catchphrase .word-2 {
+    font-weight: 500;
+    color: #ff5722;
+}
+
+.section-hero .catchphrase .word-4 {
+    font-family: 'Exo 2', sans-serif;
+    color: #00ff66;
+    text-shadow: 0 0 12px #00ff66;
+    font-weight: 700;
+}
+
+.section-hero .catchphrase .wrapper-mask {
+    display: block;
+    padding-bottom: .20ch;
+    margin-bottom: -.20ch;
+    padding-top: .20ch;
+    margin-top: -.20ch;
+    padding-left: 0.2ch;
+    padding-right: 0.2ch;
+    margin-left: -0.2ch;
+    margin-right: -0.2ch;
+    overflow: hidden;
+}
+
+.section-hero .gallery {
+    position: absolute;
+    left: 0;
+    overflow-x: visible;
+    overflow-y: hidden;
+    bottom: 0;
+    height: 20rem;
+    display: flex;
+    background-color: red;
+    transform: translateX(var(--translateX));
+}
+
+.section-hero .gallery .item {
+    background-color: #ffffff;
+    min-width: 24.4rem;
+    height: 100%;
+    margin: 0 20rem 0 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.section-hero .gallery .item .container-img {
+    border-radius: 6.9rem;
+    overflow: hidden;
+}
+
+.section-hero .gallery .item .container-img {
+    width: 100%;
+    height: 57%;
+}
+
+.section-hero .gallery .item .container-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-hero .gallery .item .label {
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
