@@ -115,11 +115,9 @@ html {
         bottom: 0;
         height: 20rem;
         display: flex;
-        background-color: red;
         transform: translateX(var(--translateX));
 
         .item {
-            background-color: #ffffff;
             min-width: 24.4rem;
             height: 100%;
             margin: 0 20rem 0 0;
