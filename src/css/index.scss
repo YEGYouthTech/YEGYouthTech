@@ -10,13 +10,25 @@
     }
 }
 
+@keyframes slide-left {
+    0% {
+        opacity: 0;
+        transform: translateX(101%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html {
+html, body {
     overflow-x: hidden;
 }
 
@@ -125,6 +137,8 @@ html {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            animation: slide-left 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s both;
+            animation-delay: calc(200ms * var(--index) + 200ms);
 
 
             .container-img {
