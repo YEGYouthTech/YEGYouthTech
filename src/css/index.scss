@@ -28,8 +28,9 @@
     box-sizing: border-box;
 }
 
-html, body {
-    overflow-x: hidden;
+* {
+    overflow-x: hidden !important;
+    // HACK: This is probably bad practice!
 }
 
 .section-hero {
