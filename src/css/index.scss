@@ -22,20 +22,6 @@
     }
 }
 
-@keyframes scale {
-    0% {
-        font-size: 4rem;
-    }
-
-    50% {
-        font-size: 7rem;
-    }
-
-    100% {
-        font-size: 5rem;
-    }
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -176,10 +162,6 @@
         .line-2 {
             color: #ff5722;
             font-style: italic;
-        }
-
-        .word-7 {
-            animation: scale 1s ease-in-out 4s;
         }
     }
 }
