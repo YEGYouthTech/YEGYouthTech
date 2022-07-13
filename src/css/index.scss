@@ -186,5 +186,6 @@
         background-repeat: no-repeat;
         background-size: cover;
         filter: hue-rotate(225deg) saturate(1.5);
+        z-index: -1;
     }
 }
