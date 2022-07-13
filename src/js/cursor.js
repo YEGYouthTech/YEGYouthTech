@@ -8,7 +8,7 @@ body #magicMouseCursor {
   width: 124px;
   height: 124px;
   transform: var(--transform-matrix) scale(0);
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(150, 150, 150, 0.6);
   border-radius: 50%;
   z-index: 9999;
   left: 0;
@@ -27,7 +27,7 @@ body #magicPointer {
   border-radius: 50%;
   pointer-events: none;
   mix-blend-mode: difference;
-  transition: background 0.2s, width 0.2s, height 0.2s, box-shadow 0.2s; }
+  transition: transform 0.07s, background 0.2s, width 0.2s, height 0.2s, box-shadow 0.2s; }
   body #magicPointer.is-hover {
     background: red; }
   body #magicPointer.pointer-blur {
