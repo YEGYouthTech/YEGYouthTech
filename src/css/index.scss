@@ -140,9 +140,153 @@
 
 .section-pitch {
     position: relative;
+    // padding: 21.5rem 4.3rem 38rem 4.3rem;
+    padding-bottom: 25rem;
 
     .container {
-        padding: 21.5rem 4.3rem 38rem 4.3rem;
+        width: 100%;
+        height: auto;
+        overflow: visible !important; // HACK
+
+        .catchphrase {
+            // position: absolute;
+            // top: 5rem;
+            // left: 50%;
+            // transform: translateX(-50%);
+            width: 100%;
+
+            .line-2 {
+                color: #ff5722;
+                font-style: italic;
+            }
+
+            .line-3 {
+                position: relative;
+                z-index: 1000;
+            }
+        }
+
+        .container-img {
+            display: flex;
+            width: 20vw;
+            height: 33vw;
+            margin: -12rem auto 10rem auto;
+            z-index: 2;
+            visibility: visible !important;
+            overflow: visible !important;
+            -webkit-transition: all 0s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            -moz-transition: all 0s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            -ms-transition: all 0s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            -o-transition: all 0s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            transition: all 0s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            transition-delay: 0s;
+            transform: translateY(var(--translateY));
+            will-change: transform;
+
+            &:after {
+                content: '';
+                width: 1px;
+                height: 14.6vw;
+                display: block;
+                background: #ffffff;
+                position: absolute;
+                top: auto;
+                right: auto;
+                bottom: -7.9vw;
+                left: 50%;
+                z-index: 3;
+                transform-origin: top;
+                transform: translateX(-50%) scaleY(0);
+                -webkit-transition: all 0s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                -moz-transition: all 0s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                -ms-transition: all 0s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                -o-transition: all 0s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                transition: all 0s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                transition-delay: 0s;
+            }
+
+            .wrapper-mask {
+                overflow: hidden;
+                border-radius: 0;
+                transform: translateY(50%) scaleX(1.3);
+                -webkit-transition: all 0s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                -moz-transition: all 0s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                -ms-transition: all 0s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                -o-transition: all 0s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                transition: all 0s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                transition-delay: 0s;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    -o-object-fit: cover;
+                    object-fit: cover;
+                    -o-object-position: center top;
+                    object-position: center top;
+
+                    border-radius: 0;
+                    transform-origin: center;
+                    transform: scale(1.3) rotate(0.001deg);
+                    -webkit-transition: all 0s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                    -moz-transition: all 0s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                    -ms-transition: all 0s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                    -o-transition: all 0s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                    transition: all 0s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                    transition-delay: 0s;
+                }
+            }
+        }
+
+        .catchphrase.aos-animate + .container-img {
+            &:after {
+                transform: translateX(-50%) scaleY(1);
+                -webkit-transition: all 0.9s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                -moz-transition: all 0.9s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                -ms-transition: all 0.9s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                -o-transition: all 0.9s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                transition: all 0.9s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                transition-delay: 0s;
+                transition-delay: 0.9s;
+            }
+
+            .wrapper-mask {
+                border-radius: 14.5rem;
+                transform: translateY(0) scaleX(1);
+                -webkit-transition: all 0.9s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                -moz-transition: all 0.9s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                -ms-transition: all 0.9s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                -o-transition: all 0.9s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                transition: all 0.9s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                transition-delay: 0s;
+
+                img {
+                    transform: scale(1) rotate(0.001deg);
+                    -webkit-transition: all 1.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                    -moz-transition: all 1.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                    -ms-transition: all 1.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                    -o-transition: all 1.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                    transition: all 1.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                    transition-delay: 0s;
+                    transition-delay: 0.2s;
+                }
+            }
+        }
+    }
+
+    .text-container {
+        margin-top: 22.2rem;
+        overflow: visible !important;
+
+        p {
+            color: #ffffff;
+            margin: -6.2rem auto 0 auto;
+            max-width: 50ch;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 2;
+            font-family: 'Montserrat', sans-serif;
+        }
     }
 
     .background {
@@ -156,13 +300,6 @@
         background-size: cover;
         filter: hue-rotate(225deg) saturate(1.5);
         z-index: -1;
-    }
-
-    .catchphrase {
-        .line-2 {
-            color: #ff5722;
-            font-style: italic;
-        }
     }
 }
 
@@ -189,7 +326,13 @@
         padding-right: 0.2ch;
         margin-left: -0.2ch;
         margin-right: -0.2ch;
+        margin: 0;
+        padding: 0;
         overflow: hidden;
+    }
+
+    .wrapper-mask:not(:first-of-type) {
+        margin-top: -0.4em;
     }
 }
 
