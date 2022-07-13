@@ -168,3 +168,23 @@
         }
     }
 }
+
+.section-pitch {
+    position: relative;
+
+    .container {
+        padding: 21.5rem 4.3rem 38rem 4.3rem;
+    }
+
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("../img/bg-02.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: hue-rotate(225deg) saturate(1.5);
+    }
+}
