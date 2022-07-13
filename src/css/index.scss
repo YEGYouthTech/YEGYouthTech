@@ -34,8 +34,9 @@
 }
 
 .section-hero {
+    position: relative;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh + 5rem);
 
     .bg {
         position: absolute;
