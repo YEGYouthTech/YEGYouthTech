@@ -1,7 +1,6 @@
 (function () {
-    const elem = document.querySelector(".section-hero .bg");
     basicScroll.create({
-        elem: elem,
+        elem: document.querySelector(".section-hero .bg"),
         from: 'top-top',
         to: 'bottom-top',
         direct: true,
@@ -12,9 +11,8 @@
             }
         }
     }).start();
-    const elem2 = document.querySelector(".section-hero .gallery");
     basicScroll.create({
-        elem: elem2,
+        elem: document.querySelector(".section-hero .gallery"),
         from: 'bottom-bottom',
         to: 'bottom-top',
         direct: true,
@@ -25,11 +23,8 @@
             }
         }
     }).start();
-    const elem3 = document.querySelector(".section-pitch .container-img"),
-        from3 = document.documentElement.scrollTop + elem3.getBoundingClientRect().y - window.innerHeight,
-        to3 = document.documentElement.scrollTop + document.querySelector(".section-pitch").getBoundingClientRect().y + document.querySelector(".section-pitch").getBoundingClientRect().height / 2;
     basicScroll.create({
-        elem: elem3,
+        elem: document.querySelector(".section-pitch .container-img"),
         from: 'top-bottom',
         to: 'bottom-top',
         direct: true,
