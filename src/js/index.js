@@ -2,8 +2,8 @@
     const elem = document.querySelector(".section-hero .bg");
     basicScroll.create({
         elem: elem,
-        from: 0,
-        to: elem.scrollHeight,
+        from: 'top-top',
+        to: 'bottom-top',
         direct: true,
         props: {
             '--translateY': {
@@ -15,8 +15,8 @@
     const elem2 = document.querySelector(".section-hero .gallery");
     basicScroll.create({
         elem: elem2,
-        from: 0,
-        to: window.innerHeight,
+        from: 'bottom-bottom',
+        to: 'bottom-top',
         direct: true,
         props: {
             '--translateX': {
@@ -30,8 +30,8 @@
         to3 = document.documentElement.scrollTop + document.querySelector(".section-pitch").getBoundingClientRect().y + document.querySelector(".section-pitch").getBoundingClientRect().height / 2;
     basicScroll.create({
         elem: elem3,
-        from: from3,
-        to: to3,
+        from: 'top-bottom',
+        to: 'bottom-top',
         direct: true,
         props: {
             '--translateY': {
