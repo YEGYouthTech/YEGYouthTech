@@ -1,0 +1,2 @@
+container-img trigger affects catchphrase
+remove HACKs in SCSS
