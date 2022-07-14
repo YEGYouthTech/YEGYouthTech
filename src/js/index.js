@@ -26,8 +26,8 @@
         }
     }).start();
     const elem3 = document.querySelector(".section-pitch .container-img"),
-          from3 = document.documentElement.scrollTop + elem3.getBoundingClientRect().y - window.innerHeight,
-          to3 = document.documentElement.scrollTop + document.querySelector(".section-pitch").getBoundingClientRect().y + document.querySelector(".section-pitch").getBoundingClientRect().height / 2;
+        from3 = document.documentElement.scrollTop + elem3.getBoundingClientRect().y - window.innerHeight,
+        to3 = document.documentElement.scrollTop + document.querySelector(".section-pitch").getBoundingClientRect().y + document.querySelector(".section-pitch").getBoundingClientRect().height / 2;
     basicScroll.create({
         elem: elem3,
         from: from3,
@@ -52,3 +52,13 @@
     });
 
 })();
+
+const hamburger = document.querySelector(".hamburger");
+const logo = document.querySelector("nav .logo")
+const links = document.querySelector(".navbar-links");
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("clicked");
+    logo.classList.toggle("show");
+    links.classList.toggle("show");
+});

@@ -33,6 +33,198 @@
     // HACK: This is probably bad practice!
 }
 
+a {
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+// nav {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     z-index: 1;
+//     padding: 2rem 3rem;
+//     background-color: rgba(#000, 0.5);
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: flex-start;
+//     align-items: center;
+//     font-family: 'Montserrat', sans-serif;
+
+//     .hamburger {
+//         height: 27px;
+//         width: 30px;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: space-around;
+//         align-items: center;
+//         margin-right: 1rem;
+
+//         &:hover {
+//             .bar {
+//                 background-color: #fff;
+//             }
+//         }
+
+//         .bar {
+//             background-color: rgba(#fff, 0.6);
+//             width: 100%;
+//             height: 3px;
+//             transition: 100ms background-color linear;
+//         }
+
+//         &.clicked {
+//             overflow: hidden;
+
+//             .bar {
+//                 width: 30px;
+//             }
+
+//             .bar:nth-child(2) {
+//                 display: none;
+//             }
+
+//             .bar:nth-child(1) {
+//                 transform: rotate(45deg) translateY(10px) translateX(-3px);
+//             }
+
+//             .bar:nth-child(3) {
+//                 transform: rotate(-45deg) translateY(-10px) translateX(-3px);
+//             }
+//         }
+//     }
+
+//     a,
+//     li {
+//         font-size: 1.5rem;
+//         color: rgba(#fff, 0.6);
+//         transition: 100ms color linear;
+
+//         &:hover {
+//             color: #fff;
+//         }
+//     }
+
+//     a {
+//         &.hide {
+//             display: none;
+//         }
+//     }
+
+//     .navbar-links {
+//         &.hide {
+//             display: none;
+//         }
+
+//         ul {
+//             display: flex;
+//             flex-direction: row;
+
+//         }
+//     }
+// }
+
+nav {
+    padding: 2rem 3rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background: rgba(0, 0, 0, .6);
+    font-family: "Montserrat", sans-serif;
+
+    a {
+        color: #fff;
+    }
+
+    .logo {
+        display: none;
+
+        &.show {
+            display: inline-block;
+        }
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 2rem;
+        height: 21px;
+        margin-right: 1rem;
+
+        .bar {
+            height: 3px;
+            width: 100%;
+            background: rgba(#fff, 0.8);
+        }
+
+        &:hover {
+            .bar {
+                background: #fff;
+            }
+        }
+
+        &.clicked {
+            justify-content: center;
+            overflow: hidden;
+
+            .bar:nth-child(2) {
+                display: none;
+            }
+
+            .bar:nth-child(1) {
+                transform: rotate(45deg) translateY(2px);
+            }
+
+            .bar:nth-child(3) {
+                transform: rotate(-45deg) translateY(-2px);
+            }
+        }
+    }
+
+    .navbar-links {
+        display: none;
+
+        &.show {
+            display: inline-block;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            width: 100%;
+
+            li {
+                display: inline-block;
+
+                a:hover {
+                    color: #fff;
+                }
+
+                &:nth-child(1),
+                &:nth-child(2),
+                &:nth-child(3) {
+                    margin-right: 2rem;
+                }
+            }
+        }
+
+        &.show {
+            display: flex;
+        }
+    }
+}
+
+
+
 .section-hero {
     position: relative;
     width: 100%;
@@ -237,7 +429,7 @@
             }
         }
 
-        .catchphrase.aos-animate + .container-img {
+        .catchphrase.aos-animate+.container-img {
             &:after {
                 transform: translateX(-50%) scaleY(1);
                 -webkit-transition: all 0.9s cubic-bezier(0.455, 0.03, 0.515, 0.955);
