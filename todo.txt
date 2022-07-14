@@ -1,2 +1,3 @@
 container-img trigger affects catchphrase
 remove HACKs in SCSS
+proper ancher placement instead of anchor trick in section-pitch
