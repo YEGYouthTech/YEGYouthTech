@@ -29,8 +29,8 @@
 }
 
 * {
-    overflow-x: hidden !important;
-    // HACK: This is probably bad practice!
+    overflow: hidden !important;
+    // HACK: This is really bad practice!
 }
 
 a {
