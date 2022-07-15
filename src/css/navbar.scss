@@ -85,6 +85,8 @@ nav {
             width: 18px;
             height: 14px;
             margin-top: -25%;
+            box-sizing: content-box;
+            padding: 4px;
 
             .bar {
                 height: 1px;
