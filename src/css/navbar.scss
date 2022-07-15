@@ -133,7 +133,7 @@ nav {
 
                 a {
                     transform: translateY(0);
-                    transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1) calc(0.05s*(var(--index) + 1) + 0.5s);
+                    transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1) calc(0.05s*(var(--index) + 1) + 0.2s);
                 }
             }
 
