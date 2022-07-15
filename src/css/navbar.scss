@@ -122,14 +122,16 @@ nav {
         .navbar-links {
             // display: none;
             opacity: 0;
+            visibility: hidden;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
             left: 6rem;
 
             &.show {
-                // display: inline-block;
+                display: inline-block;
                 opacity: 1;
+                visibility: visible;
 
                 a {
                     transform: translateY(0);

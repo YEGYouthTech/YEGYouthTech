@@ -77,6 +77,8 @@ nav .nav-wrapper .hamburger {
   width: 18px;
   height: 14px;
   margin-top: -25%;
+  box-sizing: content-box;
+  padding: 4px;
 }
 nav .nav-wrapper .hamburger .bar {
   height: 1px;
@@ -102,17 +104,20 @@ nav .nav-wrapper .hamburger.clicked .bar:nth-child(3) {
 }
 nav .nav-wrapper .navbar-links {
   opacity: 0;
+  visibility: hidden;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: 6rem;
 }
 nav .nav-wrapper .navbar-links.show {
+  display: inline-block;
   opacity: 1;
+  visibility: visible;
 }
 nav .nav-wrapper .navbar-links.show a {
   transform: translateY(0);
-  transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1) calc(0.05s * (var(--index) + 1) + 0.5s);
+  transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1) calc(0.05s * (var(--index) + 1) + 0.2s);
 }
 nav .nav-wrapper .navbar-links ul {
   display: flex;
