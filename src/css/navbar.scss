@@ -7,6 +7,11 @@ nav {
     background: rgba(0, 0, 0, .6);
     font-family: "Montserrat", sans-serif;
 
+    a {
+        text-decoration: none;
+        font-size: 1.3rem;
+    }
+
     .nav-wrapper {
         padding: 2rem 3rem;
         height: 100%;
