@@ -33,6 +33,10 @@
     // HACK: This is really bad practice!
 }
 
+html {
+    overflow-y: auto !important;
+}
+
 a {
     text-decoration: none;
     font-size: 1.3rem;
