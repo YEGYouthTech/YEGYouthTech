@@ -49,7 +49,7 @@
 })();
 
 const hamburger = document.querySelector(".hamburger");
-const logo = document.querySelector("nav .logo")
+const logo = document.querySelector("nav .menu-text")
 const links = document.querySelector(".navbar-links");
 
 hamburger.addEventListener("click", () => {
