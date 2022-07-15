@@ -46,6 +46,13 @@
         loop: false
     });
 
+    const sentence = new Movinwords({
+        "el": ".section-pitch .text-container .text-short",
+        "transition": "slideInBottom",
+        "autostart": true,
+        "wordSpacing": 15,
+    });
+
 })();
 
 const hamburger = document.querySelector(".hamburger");

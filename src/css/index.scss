@@ -22,6 +22,18 @@
     }
 }
 
+@keyframes mouse-scroll {
+    0% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0.5;
+    }
+    40% {
+        opacity: 0;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -402,14 +414,60 @@ nav {
 
         p {
             color: #ffffff;
-            margin: -6.2rem auto 0 auto;
             max-width: 50ch;
             text-align: center;
             font-size: 1rem;
             font-weight: 300;
             line-height: 2;
             font-family: 'Montserrat', sans-serif;
+            margin: 0 auto 0 auto;
         }
+
+        &:first-child {
+            margin: -6.2rem;
+        }
+
+        .text-short {
+            font-size: 3rem;
+            max-width: min(28ch, 90%);
+            line-height: 1.5em;
+            opacity: 0.87;
+        }
+
+        .text-scroll {
+            margin: 2.2rem auto 0 auto;
+            opacity: 0.87;
+        }
+
+        .scroll-arrow {
+            display: block;
+            width: fit-content;
+            margin: 3rem auto 0 auto;
+
+            .scroll-arrowhead {
+                display: block;
+                transform: rotate(45deg);
+                border-right: 2px solid #fff;
+                border-bottom: 2px solid #fff;
+                margin: 0 0 3px 4px;
+                width: 16px;
+                height: 16px;
+                animation: mouse-scroll 1s infinite;
+
+                &:nth-of-type(1) {
+                    margin-top: -1px;
+                    animation-delay: 0.1s;
+                }
+                &:nth-of-type(2) {
+                    margin-top: -6px;
+                    animation-delay: 0.2s;
+                }
+                &:nth-of-type(3) {
+                    margin-top: -6px;
+                    animation-delay: 0.3s;
+                }
+            }
+            }
     }
 
     .background {
