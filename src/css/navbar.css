@@ -45,14 +45,21 @@ nav .nav-wrapper .navbar-section.navbar-section-logo .logo::before {
 nav .nav-wrapper .navbar-section.navbar-section-logo .logo::after {
   left: 100%;
 }
-nav .nav-wrapper .menu-text {
-  display: none;
+nav .nav-wrapper .menu-wrap {
   position: absolute;
   top: 2rem;
   left: 6rem;
+  height: 25px;
+  width: 12ch;
 }
-nav .nav-wrapper .menu-text.show {
-  display: inline-block;
+nav .nav-wrapper .menu-text {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.6s 0.2s, opacity 0.6s 0.2s, color 0.3s 0.2s;
 }
 nav .nav-wrapper .hamburger {
   display: flex;
@@ -114,4 +121,9 @@ nav .nav-wrapper .navbar-links.show {
 }
 nav[data-get-section=hero] .nav-wrapper .navbar-links ul li a.link-hero, nav[data-get-section=pitch] .nav-wrapper .navbar-links ul li a.link-pitch {
   color: #fafafa;
+}
+nav[data-get-section=hero] .nav-wrapper .menu-text-menu, nav[data-get-section=pitch] .nav-wrapper .menu-text-pitch {
+  transform: none;
+  opacity: 1;
+  transition-delay: 0.3s, 0.3s, 0.3s;
 }/*# sourceMappingURL=navbar.css.map */

@@ -50,15 +50,22 @@ nav {
             }
         }
 
-        .menu-text {
-            display: none;
+        .menu-wrap {
             position: absolute;
             top: 2rem;
             left: 6rem;
+            height: 25px;
+            width: 12ch;
+        }
 
-            &.show {
-                display: inline-block;
-            }
+        .menu-text {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateY(100%);
+            opacity: 0;
+            transition: transform .6s .2s, opacity .6s .2s, color .3s .2s;
         }
 
         .hamburger {
@@ -142,5 +149,12 @@ nav {
     &[data-get-section="hero"] .nav-wrapper .navbar-links ul li a.link-hero,
     &[data-get-section="pitch"] .nav-wrapper .navbar-links ul li a.link-pitch {
         color: #fafafa;
+    }
+
+    &[data-get-section="hero"] .nav-wrapper .menu-text-menu,
+    &[data-get-section="pitch"] .nav-wrapper .menu-text-pitch {
+        transform: none;
+        opacity: 1;
+        transition-delay: 0.3s, 0.3s, 0.3s;
     }
 }
