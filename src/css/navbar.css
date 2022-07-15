@@ -33,7 +33,8 @@ nav .nav-wrapper .navbar-section.navbar-section-logo .logo {
   position: relative;
   overflow: visible !important;
   text-transform: uppercase;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
+  font-weight: 600;
   padding: 0 1.5ch;
 }
 nav .nav-wrapper .navbar-section.navbar-section-logo .logo::before, nav .nav-wrapper .navbar-section.navbar-section-logo .logo::after {
