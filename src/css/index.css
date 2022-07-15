@@ -262,7 +262,7 @@ a {
   transition-delay: 0.2s;
 }
 .section-pitch .text-container {
-  margin-top: 22.2rem;
+  margin-top: 12.2rem;
   overflow: visible !important;
 }
 .section-pitch .text-container p {
@@ -284,7 +284,7 @@ a {
   line-height: 1.5em;
   opacity: 0.87;
 }
-.section-pitch .text-container .text-scroll {
+.section-pitch .text-container .text-small {
   margin: 2.2rem auto 0 auto;
   opacity: 0.87;
 }
