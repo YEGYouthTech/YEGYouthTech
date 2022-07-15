@@ -44,6 +44,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
         integrity="sha256-GqiEX9BuR1rv5zPU5Vs2qS/NSHl1BJyBcjQYJ6ycwD4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/index.css">
 
     <!-- Scripts -->
@@ -65,43 +66,37 @@
 
 <body class="home en">
 
-    <header data-get-section>
-
-    </header>
-
-    <main>
-        <nav>
-            <div class="nav-wrapper">
-                <div class="navbar-section">
-                    <div class="hamburger">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                    </div>
-
-                    <a href="#" class="menu-text show">Menu</a>
-
-                    <div class="navbar-links">
-                        <ul>
-                            <li><a href="#" class="nav-link">Link</a></li>
-                            <li><a href="#" class="nav-link">Link</a></li>
-                            <li><a href="#" class="nav-link">Link</a></li>
-                            <li><a href="#" class="nav-link">Link</a></li>
-                        </ul>
-                    </div>
+    <nav data-get-section>
+        <div class="nav-wrapper">
+            <div class="navbar-section">
+                <div class="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
                 </div>
 
-                <div class="navbar-section">
-                    <a href="#" class="logo">YEGYOUTH.TECH</a>
-                </div>
+                <a href="#" class="menu-text show">Menu</a>
 
-                <div class="navbar-section">
-                    <a class="button" href="#">Join!</a>
+                <div class="navbar-links">
+                    <ul>
+                        <li><a href="#" class="nav-link link-hero">Home</a></li>
+                        <li><a href="#section-pitch" class="nav-link link-pitch">Pitch</a></li>
+                    </ul>
                 </div>
             </div>
-        </nav>
 
-        <section class="section-hero" data-set-section="hero">
+            <div class="navbar-section">
+                <a href="#" class="logo">YEGYOUTH.TECH</a>
+            </div>
+
+            <div class="navbar-section">
+                <a class="button" href="#">Join!</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="section-hero" class="section-hero" data-set-section="hero">
             <div class="bg"></div>
             <div class="bg-overlay"></div>
             <div class="catchphrase" data-aos>
@@ -163,7 +158,7 @@
                 </div>
             </div>
         </section>
-        <section class="section-pitch" data-set-section="pitch">
+        <section id="section-pitch" class="section-pitch" data-set-section="pitch">
             <div class="container">
                 <div class="catchphrase" data-aos>
                     <span class="wrapper-mask line-1">
