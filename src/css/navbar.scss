@@ -24,6 +24,30 @@ nav {
 
         .navbar-section {
             display: inline-block;
+            overflow: visible !important;
+
+            &.navbar-section-logo {
+                .logo {
+                    position: relative;
+                    overflow: visible !important;
+                    text-transform: uppercase;
+                    &::before, &::after {
+                        content: ' ';
+                        display: block;
+                        width: 10vw;
+                        height: 2px;
+                        background: red;
+                        position: absolute;
+                        top: 50%;
+                    }
+                    &::before {
+                        transform: translate(-100%, -50%);
+                    }
+                    &::after {
+                        left: 100%;
+                    }
+                }
+            }
         }
 
         .menu-text {

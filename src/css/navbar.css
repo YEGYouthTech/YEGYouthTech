@@ -35,6 +35,32 @@ nav .nav-wrapper a {
 
 nav .nav-wrapper .navbar-section {
   display: inline-block;
+  overflow: visible !important;
+}
+
+nav .nav-wrapper .navbar-section.navbar-section-logo .logo {
+  position: relative;
+  overflow: visible !important;
+  text-transform: uppercase;
+}
+
+nav .nav-wrapper .navbar-section.navbar-section-logo .logo::before, nav .nav-wrapper .navbar-section.navbar-section-logo .logo::after {
+  content: ' ';
+  display: block;
+  width: 10vw;
+  height: 2px;
+  background: red;
+  position: absolute;
+  top: 50%;
+}
+
+nav .nav-wrapper .navbar-section.navbar-section-logo .logo::before {
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+}
+
+nav .nav-wrapper .navbar-section.navbar-section-logo .logo::after {
+  left: 100%;
 }
 
 nav .nav-wrapper .menu-text {
