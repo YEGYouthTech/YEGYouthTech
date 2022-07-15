@@ -54,120 +54,6 @@ a {
     font-size: 1.3rem;
 }
 
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    background: rgba(0, 0, 0, .6);
-    font-family: "Montserrat", sans-serif;
-
-    .nav-wrapper {
-        padding: 2rem 3rem;
-        height: 100%;
-        width: 100%;
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-
-        a {
-            color: #fff;
-        }
-
-        .navbar-section {
-            display: inline-block;
-        }
-
-        .menu-text {
-            display: none;
-            position: absolute;
-            top: 2rem;
-            left: 6rem;
-
-            &.show {
-                display: inline-block;
-            }
-        }
-
-        .hamburger {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 2rem;
-            height: 21px;
-
-            .bar {
-                height: 3px;
-                width: 100%;
-                background: rgba(#fff, 0.8);
-            }
-
-            &:hover {
-                .bar {
-                    background: #fff;
-                }
-            }
-
-            &.clicked {
-                justify-content: center;
-                overflow: hidden;
-
-                .bar:nth-child(2) {
-                    display: none;
-                }
-
-                .bar:nth-child(1) {
-                    transform: rotate(45deg) translateY(2px);
-                }
-
-                .bar:nth-child(3) {
-                    transform: rotate(-45deg) translateY(-2px);
-                }
-            }
-        }
-
-        .navbar-links {
-            display: none;
-            position: absolute;
-            top: 2.15rem;
-            left: 6rem;
-
-            &.show {
-                display: inline-block;
-            }
-
-            ul {
-                display: flex;
-                flex-direction: row;
-                list-style: none;
-
-                li {
-                    display: inline-block;
-
-                    a:hover {
-                        color: #fff;
-                    }
-
-                    &:nth-child(1),
-                    &:nth-child(2),
-                    &:nth-child(3) {
-                        margin-right: 2rem;
-                    }
-                }
-            }
-
-            &.show {
-                display: flex;
-            }
-        }
-    }
-}
-
-
-
 .section-hero {
     position: relative;
     width: 100%;
@@ -221,6 +107,7 @@ nav {
             color: #00ff66;
             text-shadow: 0 0 12px #00ff66;
             font-weight: 700;
+            overflow: visible !important; // Glow may exceed the bounding box
         }
 
 
