@@ -439,6 +439,75 @@ html {
   stroke-linecap: round;
 }
 
+footer {
+  background: #171719;
+  color: #ffffff;
+  padding: 40px 9vw 0 9vw;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+footer .container {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 40px 0 60px 0;
+}
+footer .container .logo {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+footer .container .links {
+  margin-left: 150px;
+}
+footer .container .links a {
+  color: #767676;
+  margin-right: 0.6ch;
+}
+footer .container .copyright {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.92rem;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: "Google Sans Text";
+  letter-spacing: 0.001ch;
+}
+footer .container .socials {
+  margin-left: auto;
+  display: flex;
+}
+footer .container .socials a {
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  box-sizing: border-box;
+  width: 50px;
+  cursor: pointer;
+  height: 50px;
+  display: flex;
+  color: transparent;
+  background: transparent;
+  transition: border-color 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0s, background 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  align-items: center;
+  border-radius: 50%;
+  justify-content: center;
+}
+footer .container .socials a:hover {
+  border-color: transparent;
+  background: #ffffff;
+}
+footer .container .socials a:hover svg {
+  fill: #171719;
+}
+footer .container .socials a:not(:last-child) {
+  margin-right: 10px;
+}
+footer .container .socials a svg {
+  fill: rgb(255, 255, 255);
+  width: 12px;
+  height: 12px;
+  transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
 .catchphrase {
   font-size: 5rem;
   margin: 12rem auto auto 0;
