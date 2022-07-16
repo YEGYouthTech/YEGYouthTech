@@ -47,6 +47,11 @@ nav .nav-wrapper .navbar-section.navbar-section-logo .logo::before, nav .nav-wra
   position: absolute;
   top: 50%;
 }
+@media screen and (max-width: 768px) {
+  nav .nav-wrapper .navbar-section.navbar-section-logo .logo::before, nav .nav-wrapper .navbar-section.navbar-section-logo .logo::after {
+    display: none;
+  }
+}
 nav .nav-wrapper .navbar-section.navbar-section-logo .logo::before {
   transform: translate(-100%, -50%);
 }

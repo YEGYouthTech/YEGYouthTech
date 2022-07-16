@@ -502,13 +502,6 @@ footer {
             font-size: 1.2rem;
             font-weight: 600;
         }
-        .links {
-            margin-left: 150px;
-            a {
-                color: #767676;
-                margin-right: .6ch;
-            }
-        }
         .copyright {
             // margin-left: 50px;
             position: absolute;
@@ -519,6 +512,14 @@ footer {
             line-height: 1.5;
             font-family: 'Google Sans Text';
             letter-spacing: 0.001ch;
+            @media screen and (max-width: 768px) {
+                position: static;
+                transform: none;
+                margin: 0 auto;
+            }
+            @media screen and (max-width: 546px) {
+                font-size: 0.8rem;
+            }
         }
         .socials {
             margin-left: auto;
@@ -600,5 +601,27 @@ footer {
         display: inline-block;
         animation: slide-up 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s both;
         animation-delay: calc(200ms * var(--index) + 200ms);
+    }
+}
+
+html {
+    @media only screen and (min-width: 1025.1px) {
+        font-size: 0.7vw;
+    }
+
+    @media only screen and (min-width: 767.98px) and (max-width: 1025px) {
+        font-size: 1.2vw;
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        font-size: 2.4vw;
+    }
+
+    @media only screen and (max-width: 768px) and (max-height: 550px) and (orientation: landscape) and (min-width: 420px) {
+        font-size: 1.2vw;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1025px) and (max-height: 550px) and (orientation: landscape) {
+        font-size: .9vw;
     }
 }

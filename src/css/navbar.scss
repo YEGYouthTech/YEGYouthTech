@@ -48,6 +48,9 @@ nav {
                         opacity: 0.87;
                         position: absolute;
                         top: 50%;
+                        @media screen and (max-width: 768px) {
+                            display: none;
+                        }
                     }
                     &::before {
                         transform: translate(-100%, -50%);
