@@ -373,10 +373,14 @@ html {
     padding: 120px 9vw 120px 9vw;
     justify-content: space-between;
     font-family: 'Montserrat', sans-serif;
+    flex-wrap: wrap;
     
-    .info {
+    > div {
         width: 50%;
-        padding-right: 60px;
+        min-width: min(38ch, 100%);
+    }
+
+    .info {
         h3 {
             color: #ffffff;
             font-size: 50px;
@@ -402,7 +406,6 @@ html {
 
     .form {
         position: relative;
-        width: 50%;
         margin-top: 15px;
         overflow: visible !important;
 
