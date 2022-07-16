@@ -35,6 +35,18 @@
             }
         }
     }).start();
+    basicScroll.create({
+        elem: document.querySelector("#donut"),
+        from: document.querySelector("#section-pitch").getBoundingClientRect().y + document.documentElement.scrollTop - window.innerHeight,
+        to: document.querySelector("#section-pitch").getBoundingClientRect().y + document.documentElement.scrollTop + document.querySelector("#section-pitch").getBoundingClientRect().height,
+        direct: true,
+        props: {
+            '--translateY': {
+                from: '0vh',
+                to: '40vh'
+            }
+        }
+    }).start();
     AOS.init();
     document.querySelector(".section-hero .catchphrase .word-4").innerHTML = "<span></span>";
     new Typed(".section-hero .catchphrase .word-4 span", {
