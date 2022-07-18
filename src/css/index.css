@@ -578,4 +578,10 @@ footer .container .socials a svg {
   html {
     font-size: 0.9vw;
   }
+}
+
+@media only screen and (min-width: 1024px) {
+  .text-containerr {
+    font-size: 1.8rem;
+  }
 }/*# sourceMappingURL=index.css.map */

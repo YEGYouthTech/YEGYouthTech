@@ -9,7 +9,7 @@ nav {
 }
 nav a {
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 24px;
 }
 nav .nav-wrapper {
   padding: 0 3vw;
