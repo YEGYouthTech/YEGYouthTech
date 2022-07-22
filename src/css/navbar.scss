@@ -21,10 +21,14 @@ nav {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        transition: 200ms background-color linear;
+
+        &.navbar-scroll {
+            background-color: rgba(#000, 0.7);
+        }
 
         a {
             color: #fff;
-            opacity: 0.87;
         }
 
         .navbar-section {
@@ -38,8 +42,10 @@ nav {
                     text-transform: uppercase;
                     font-size: 1.6rem;
                     font-weight: 600;
-                    padding: 0 1.5ch;
-                    &::before, &::after {
+                    padding: 0 1rem;
+
+                    &::before,
+                    &::after {
                         content: ' ';
                         display: block;
                         width: 46px;
@@ -48,13 +54,16 @@ nav {
                         opacity: 0.87;
                         position: absolute;
                         top: 50%;
+
                         @media screen and (max-width: 768px) {
                             display: none;
                         }
                     }
+
                     &::before {
                         transform: translate(-100%, -50%);
                     }
+
                     &::after {
                         left: 100%;
                     }
@@ -78,6 +87,7 @@ nav {
             left: 0;
             transform: translateY(100%);
             opacity: 0;
+            color: rgba(#fff, 0.9);
             transition: transform .6s .2s, opacity .6s .2s, color .3s .2s;
         }
 
@@ -85,21 +95,16 @@ nav {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            width: 18px;
-            height: 14px;
-            margin-top: -25%;
-            box-sizing: content-box;
-            padding: 4px;
+            width: 30px;
+            height: 21px;
 
             .bar {
                 height: 1px;
                 width: 100%;
                 background: rgba(#fff, 0.8);
-                transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            }
+                transition: 0.3s opacity cubic-bezier(0.25, 0.46, 0.45, 0.94), 0.3s transform cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
-            &:hover {
-                .bar {
+                &:hover {
                     background: #fff;
                 }
             }
@@ -129,7 +134,7 @@ nav {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            left: 6rem;
+            left: calc(6vw + 1ch);
 
             &.show {
                 display: inline-block;
@@ -152,12 +157,8 @@ nav {
 
                     a {
                         display: inline-block;
-                        color: #ababab;
+                        color: #fff;
                         transform: translateY(-100%);
-
-                        &:hover {
-                            color: #fff;
-                        }
                     }
 
                     &:nth-child(1),
@@ -174,10 +175,15 @@ nav {
         }
     }
 
-    &[data-get-section="hero"] .nav-wrapper .hamburger:not(.clicked) + .menu-wrap .menu-text-menu,
-    &[data-get-section="pitch"] .nav-wrapper .hamburger:not(.clicked) + .menu-wrap .menu-text-pitch {
+    &[data-get-section="hero"] .nav-wrapper .hamburger:not(.clicked)+.menu-wrap .menu-text-menu,
+    &[data-get-section="pitch"] .nav-wrapper .hamburger:not(.clicked)+.menu-wrap .menu-text-pitch {
         transform: none;
         opacity: 1;
         transition-delay: 0.3s, 0.3s, 0.3s;
+    }
+
+    .button {
+        padding: 0.4rem 1rem;
+        border: 1px solid #fff;
     }
 }
