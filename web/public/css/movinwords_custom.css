@@ -1,0 +1,64 @@
+[data-mw],
+.mw {
+  opacity: 0;
+}
+
+.mw.--v {
+  opacity: 1;
+}
+.mw .mw-w {
+  --mw-offset-sanitized: calc(var(--mw-offset) * 1px);
+  --mw-offset-sanitized-negative: calc(-1 * var(--mw-offset-sanitized));
+  white-space: nowrap;
+  display: inline-flex;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.mw .mw-w:not(:last-child) {
+  margin-right: calc(var(--mw-word-spacing) * 1px);
+}
+.mw.fadeIn .mw-l {
+  opacity: 0;
+  transition-property: opacity;
+  transition-timing-function: ease-out;
+  will-chage: opacity;
+}
+.mw.slideInLeft .mw-l {
+  transform: translateX(var(--mw-offset-sanitized-negative));
+}
+.mw.slideInRight .mw-l {
+  transform: translateX(var(--mw-offset-sanitized));
+}
+.mw.slideInTop .mw-l, .mw.revealInTop .mw-l {
+  transform: translateY(var(--mw-offset-sanitized-negative));
+}
+.mw.slideInBottom .mw-l, .mw.revealInBottom .mw-l {
+  transform: translateY(var(--mw-offset-sanitized));
+}
+.mw.slideInTop .mw-l, .mw.slideInBottom .mw-l, .mw.slideInLeft .mw-l, .mw.slideInRight .mw-l, .mw.revealInTop .mw-l, .mw.revealInBottom .mw-l {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-timing-function: ease-out;
+  will-chage: opacity, transform;
+}
+
+.aos-animate .mw.fadeIn.--v .mw-l, .aos-animate .mw.slideInTop.--v .mw-l, .aos-animate .mw.slideInBottom.--v .mw-l, .aos-animate .mw.slideInLeft.--v .mw-l, .aos-animate .mw.slideInRight.--v .mw-l, .aos-animate .mw.revealInTop.--v .mw-l, .aos-animate .mw.revealInBottom.--v .mw-l {
+  opacity: 1;
+}
+.aos-animate .mw.slideInTop.--v .mw-l, .aos-animate .mw.slideInBottom.--v .mw-l, .aos-animate .mw.revealInTop.--v .mw-l, .aos-animate .mw.revealInBottom.--v .mw-l {
+  transform: translateY(0);
+}
+.aos-animate .mw.slideInLeft.--v .mw-l, .aos-animate .mw.slideInRight.--v .mw-l {
+  transform: translateX(0);
+}
+.aos-animate .mw.revealInTop.--v .mw-w, .aos-animate .mw.revealInBottom.--v .mw-w {
+  overflow: hidden;
+}
+.aos-animate .mw-l {
+  position: relative;
+  display: inline-block;
+  transition-duration: var(--mw-duration);
+  transition-delay: calc(var(--mw-delay) * var(--mw-w));
+}/*# sourceMappingURL=movinwords_custom.css.map */
