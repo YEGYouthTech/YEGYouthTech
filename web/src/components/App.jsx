@@ -26,10 +26,10 @@ function App() {
 
                 <Newsletter />
 
-                {/* <section id="section-algo" className="section-algo">
+                <section id="section-algo" className="section-algo">
                     <canvas id="donut" width="600" height="480"
                         style={{ position: "fixed; top: 40%; left: 50%", transform: "translate(-50%, calc(-50% + var(--translateY))) scale(1.0)", zIndex: "-1" }}></canvas>
-                </section> */}
+                </section>
             </main>
 
             <Footer />
