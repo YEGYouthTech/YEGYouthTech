@@ -18,13 +18,13 @@ function Newsletter() {
             <div className="form">
                 <form>
                     <input type="email" name="email" placeholder="Email" spellCheck="false" />
-                    <button type="submit"><span></span></button>
+                    <button type="submit" className="magic-hover"><span></span></button>
                 </form>
-                <div className="loader">
+                {/* <div className="loader">
                     <svg viewBox="0 0 50 50">
                         <circle className="path" cx="25" cy="25" r="20" fill="none" strokeWidth="1"></circle>
                     </svg>
-                </div>
+                </div> */}
 
             </div>
         </section>
