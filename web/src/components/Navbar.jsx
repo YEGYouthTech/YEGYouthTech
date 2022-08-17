@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Navbar(props) {
+    const [isHamburgerClicked, setIsHamburgerClicked] = useState(false);
+
+    function handleHamburgerClick() {
+        setIsHamburgerClicked((prev) => !prev);
+    }
+
     return (
         <nav data-get-section={props.currentSection} data-aos="fade-down" data-aos-duration="800" data-aos-delay="1000"
             data-aos-easing="ease-out-sine">
-            <div className="nav-wrapper">
+            <div className={props.isScroll ? "nav-wrapper navbar-scroll" : "nav-wrapper"}>
                 <div className="navbar-section">
-                    <div className="hamburger magic-hover">
+                    <div className={isHamburgerClicked ? "hamburger magic-hover clicked" : "hamburger magic-hover"} onClick={handleHamburgerClick}>
                         <div className="bar"></div>
                         <div className="bar"></div>
                         <div className="bar"></div>
@@ -19,7 +25,7 @@ function Navbar(props) {
                         <a href="/#" className="menu-text menu-text-footer magic-hover">Footer</a>
                     </div>
 
-                    <div className="navbar-links">
+                    <div className={isHamburgerClicked ? "navbar-links show" : "navbar-links"}>
                         <ul>
                             <li><a href="/#" className="nav-link magic-hover" style={{ "--index": 1 }}>Home</a></li>
                             <li><a href="/#" className="nav-link magic-hover" style={{ "--index": 2 }}>Projects</a></li>

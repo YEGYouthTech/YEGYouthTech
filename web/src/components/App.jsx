@@ -10,9 +10,22 @@ import Footer from "./Footer";
 
 function App() {
     const [currentSection, setCurrentSection] = useState("");
+    const [isScroll, setIsScroll] = useState(false);
+
+    function handleScroll(e) {
+        if (e.target.scrollY >= 80) {
+            setIsScroll(true);
+        } else {
+            setIsScroll(false);
+        }
+    };
 
     return (
-        <div className="home en" data-scroll-container>
+        <div
+            className="home en"
+            data-scroll-container
+            onScroll={handleScroll}
+        >
             <AnimatedCursor
                 trailingSpeed={4}
                 innerSize={8}
@@ -37,7 +50,7 @@ function App() {
                 <script defer src="./js/donut.js"></script>
             </Helmet>
 
-            <Navbar currentSection={currentSection} />
+            <Navbar currentSection={currentSection} isScroll={isScroll} />
 
             <main>
                 <React.Fragment>
