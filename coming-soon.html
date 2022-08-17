@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coming Soon | YEGYouth.Tech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
     <style>
       body {
         height: 2000px;
@@ -14,6 +18,7 @@
         position: absolute;
         width: 100%;
         min-height: 70vh;
+        max-height: 80vh;
         object-fit: cover;
         transform: translateY(var(--translateY));
         will-change: transform;
@@ -56,6 +61,17 @@
         background-position-y: calc(-1.5 * var(--translateY));
         z-index: 1;
       }
+      .title {
+        position: absolute;
+        z-index: 0;
+        top: 15vh;
+        left: 50%;
+        transform: translateX(-50%) translateY(var(--translateY));
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: clamp(20pt, 8vw, 80pt);
+        color: rgba(255, 255, 255, 0.87);
+      }
       @media screen and (min-width: 768px) {
         .clouds {
           display: none;
@@ -64,6 +80,9 @@
       @media screen and (max-width: 475px) {
         .clouds {
           background-size: cover;
+        }
+        .title {
+            top: 30vh;
         }
       }
     </style>
@@ -79,6 +98,7 @@
       <img class="scene" data-modifier="30" src="assets/output2.png" />
       <img class="scene" data-modifier="20" src="assets/output1.png" />
       <img class="scene" data-modifier="10" src="assets/output0.png" />
+      <h1 class="title" data-modifier="25">YEGYouth.Tech</h1>
     </div>
     <script src="https://s.electerious.com/basicScroll/dist/basicScroll.min.js"></script>
     <script>
