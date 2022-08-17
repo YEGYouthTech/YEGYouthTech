@@ -144,7 +144,7 @@ nav .nav-wrapper .navbar-links ul li:nth-child(1), nav .nav-wrapper .navbar-link
 nav .nav-wrapper .navbar-links.show {
   display: flex;
 }
-nav[data-get-section=hero] .nav-wrapper .hamburger:not(.clicked) + .menu-wrap .menu-text-menu, nav[data-get-section=pitch] .nav-wrapper .hamburger:not(.clicked) + .menu-wrap .menu-text-pitch {
+nav[data-get-section=hero] .nav-wrapper .hamburger:not(.clicked) + .menu-wrap .menu-text-menu, nav[data-get-section=pitch] .nav-wrapper .hamburger:not(.clicked) + .menu-wrap .menu-text-pitch, nav[data-get-section=newsletter] .nav-wrapper .hamburger:not(.clicked) + .menu-wrap .menu-text-newsletter, nav[data-get-section=footer] .nav-wrapper .hamburger:not(.clicked) + .menu-wrap .menu-text-footer {
   transform: none;
   opacity: 1;
   transition-delay: 0.3s, 0.3s, 0.3s;

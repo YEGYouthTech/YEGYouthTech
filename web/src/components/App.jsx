@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Helmet from "react-helmet";
 import AnimatedCursor from "react-animated-cursor";
+import { Waypoint } from "react-waypoint";
 import Navbar from "./Navbar";
 import Landing from "./Landing";
 import Pitch from "./Pitch";
@@ -8,6 +9,8 @@ import Newsletter from "./Newsletter";
 import Footer from "./Footer";
 
 function App() {
+    const [currentSection, setCurrentSection] = useState("");
+
     return (
         <div className="home en" data-scroll-container>
             <AnimatedCursor
@@ -30,19 +33,36 @@ function App() {
 
             <Helmet>
                 <script defer src="./js/scroll.js"></script>
-                <script defer src="./js/scrollspy.js"></script>
                 <script defer src="./js/index.js"></script>
                 <script defer src="./js/donut.js"></script>
             </Helmet>
 
-            <Navbar />
+            <Navbar currentSection={currentSection} />
 
             <main>
-                <Landing />
+                <React.Fragment>
+                    <Waypoint
+                        onEnter={() => setCurrentSection("hero")}
+                    />
 
-                <Pitch />
+                    <Landing />
+                </React.Fragment>
 
-                <Newsletter />
+                <React.Fragment>
+                    <Waypoint
+                        onEnter={() => setCurrentSection("pitch")}
+                    />
+
+                    <Pitch />
+                </React.Fragment>
+
+                <React.Fragment>
+                    <Waypoint
+                        onEnter={() => setCurrentSection("newsletter")}
+                    />
+
+                    <Newsletter />
+                </React.Fragment>
 
                 <section id="section-algo" className="section-algo">
                     <canvas id="donut" width="600" height="480"
@@ -50,7 +70,13 @@ function App() {
                 </section>
             </main>
 
-            <Footer />
+            <React.Fragment>
+                <Waypoint
+                    onEnter={() => setCurrentSection("footer")}
+                />
+
+                <Footer />
+            </React.Fragment>
 
             <div className="cursor-wrapper" id="wrapper-cursor">
                 <div className="pointer"></div>

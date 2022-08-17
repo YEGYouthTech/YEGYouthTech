@@ -176,7 +176,9 @@ nav {
     }
 
     &[data-get-section="hero"] .nav-wrapper .hamburger:not(.clicked)+.menu-wrap .menu-text-menu,
-    &[data-get-section="pitch"] .nav-wrapper .hamburger:not(.clicked)+.menu-wrap .menu-text-pitch {
+    &[data-get-section="pitch"] .nav-wrapper .hamburger:not(.clicked)+.menu-wrap .menu-text-pitch,
+    &[data-get-section="newsletter"] .nav-wrapper .hamburger:not(.clicked)+.menu-wrap .menu-text-newsletter,
+    &[data-get-section="footer"] .nav-wrapper .hamburger:not(.clicked)+.menu-wrap .menu-text-footer {
         transform: none;
         opacity: 1;
         transition-delay: 0.3s, 0.3s, 0.3s;
