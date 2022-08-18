@@ -12,6 +12,12 @@
       rel="stylesheet"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.6.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
 
     <style>
       body {
@@ -33,7 +39,7 @@
         height: 100vh;
         width: 100%;
         overflow: hidden;
-        background: linear-gradient(
+        /* background: linear-gradient(
           0deg,
           rgba(254, 194, 144, 1) 0%,
           rgba(250, 196, 160, 1) 38%,
@@ -41,7 +47,11 @@
           rgba(177, 190, 198, 1) 85%,
           rgba(120, 152, 198, 1) 95%,
           rgba(97, 147, 196, 1) 100%
-        );
+        ); */
+        background: url("assets/jordan-steranka-o6KZyUiwns4-unsplash.jpg");
+        background-size: cover;
+        background-position: top;
+        background-attachment: fixed;
         position: relative;
       }
       img {
@@ -130,7 +140,7 @@
     </script>
   </head>
   <body>
-    <div class="parallax-container">
+    <section id="hero" class="parallax-container">
       <div
         class="clouds"
         src="assets/clouds-png-13378.png"
@@ -143,7 +153,128 @@
       <h1 class="title" data-modifier="25">
         YEGYouth.Tech
       </h1>
-    </div>
+    </section>
+
+    <section id="countdown" style="background: linear-gradient(0deg, #feba68, #fdfaac);">
+      <div class="flex-col max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+        <div class="grid grid-flow-col text-center auto-cols-max justify-center">
+          <div class="flex flex-col p-2 rounded-lg countdown-item">
+            <span class="countdown items-end text-5xl font-mono">
+              <span style="--value:15;"></span>d
+            </span>
+          </div> 
+          <div class="flex flex-col p-2 rounded-lg countdown-item">
+            <span class="countdown items-end text-5xl font-mono">
+              <span style="--value:10;"></span>h
+            </span>
+          </div> 
+          <div class="flex flex-col p-2 rounded-lg countdown-item">
+            <span class="countdown items-end text-5xl font-mono">
+              <span style="--value:24;"></span>m
+            </span>
+          </div> 
+          <div class="flex flex-col p-2 rounded-lg countdown-item">
+            <span class="countdown items-end text-5xl font-mono">
+              <span style="--value:46;"></span>s
+            </span>
+          </div>
+        </div>
+        <p class="text-center mt-4 text-2xl" style="color: rgba(0, 0, 0, 0.67);">until launch</p>
+      </div>
+    </section>
+
+    <section id="about-us">
+      <div style="background: linear-gradient(0deg, #342126, #713935, #af563b, #cf6d43, #f2884a, #fe9b5a, #feba68);">
+        <div class="max-w-2xl mx-auto py-24 px-4 grid items-center grid-cols-1 gap-y-16 gap-x-8 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8 lg:grid-cols-2">
+          <div>
+            <h2 class="text-3xl font-bold tracking-tight text-white sm:tracking-tight sm:text-4xl" data-aos="fade-up">Our Mission</h2>
+            <p class="mt-4 text-gray-100" data-aos="fade-up">
+              YEGYouth.Tech is an organization focused on spreading technological awareness to youth around the city, and we think you might be interested in an executive position to expand the organization's computer science expertise and reach across the city. 
+            </p>
+      
+            <dl class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
+              <div class="border-t border-gray-200 pt-4" data-aos="fade-up">
+                <dt class="font-medium text-gray-100">Specificity</dt>
+                <dd class="mt-2 text-sm text-gray-300">Our organization focuses on specific aspects of technology, allowing for stronger impact.</dd>
+              </div>
+      
+              <div class="border-t border-gray-200 pt-4" data-aos="fade-up">
+                <dt class="font-medium text-gray-100">Skill</dt>
+                <dd class="mt-2 text-sm text-gray-300">Our executive team members have won awards at Skills Canada, CyberPatriot, PicoCTF, CalgaryHacks, and natHACKS.</dd>
+              </div>
+      
+              <div class="border-t border-gray-200 pt-4" data-aos="fade-up">
+                <dt class="font-medium text-gray-100">Cooperation</dt>
+                <dd class="mt-2 text-sm text-gray-300">Establishing a strong presence at Old Scona Academic, Lillian Osborne, and Archbishop MacDonald by bringing leaders together.</dd>
+              </div>
+      
+              <div class="border-t border-gray-200 pt-4" data-aos="fade-up">
+                <dt class="font-medium text-gray-100">Impact</dt>
+                <dd class="mt-2 text-sm text-gray-300">All of our club meeting agendas, curriculums, and projects are hand crafted with care.</dd>
+              </div>
+      
+              <div class="border-t border-gray-200 pt-4" data-aos="fade-up">
+                <dt class="font-medium text-gray-100">Not for profit</dt>
+                <dd class="mt-2 text-sm text-gray-300">100% of any revenue we make directly goes into funding future events.</dd>
+              </div>
+      
+              <div class="border-t border-gray-200 pt-4" data-aos="fade-up">
+                <dt class="font-medium text-gray-100">Relevance</dt>
+                <dd class="mt-2 text-sm text-gray-300">All YEGYouth.Tech projects are proudly made with love from your city, Edmonton, Alberta ❤️</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
+            <!-- <img src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-01.jpg" alt="Walnut card tray with white powder coated steel divider and 3 punchout holes." class="bg-gray-100 rounded-lg">
+            <img src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-02.jpg" alt="Top down view of walnut card tray with embedded magnets and card groove." class="bg-gray-100 rounded-lg">
+            <img src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-03.jpg" alt="Side of walnut card tray with card groove and recessed card area." class="bg-gray-100 rounded-lg">
+            <img src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-04.jpg" alt="Walnut card tray filled with cards and card angled in dedicated groove." class="bg-gray-100 rounded-lg"> -->
+          </div>
+        </div>
+      </div>      
+    </section>
+
+    <style>
+      .text-primary {
+        color: rgba(253, 239, 128, .92);
+      }
+      .text-secondary {
+        color: rgba(240, 136, 76, .87);
+      }
+
+      .countdown-item {
+        color:rgba(30, 30, 30, 0.87);
+        /* background-color: rgba(0, 0, 0, 0.5); */
+      }
+
+      .countdown-item .countdown {
+        color: rgba(0, 0, 0, 0.87);
+      }
+    </style>
+
+    <section id="call-to-action" class="bg-gray-50 text-secondary" style="background: linear-gradient(0deg, #181a1c, #342126);">
+      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+        <div class="flex">
+          <div>
+            <h2 class="text-3xl tracking-tight sm:text-4xl sm:tracking-tight">
+              <span class="block font-medium">Believe in our mission?</span>
+              <span class="block font-bold text-primary">Join the executive team.</span>
+            </h2>
+            <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+              <div class="inline-flex rounded-md shadow">
+                <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md" style="background: rgba(240, 136, 76, 0.9); color: #181a1c;">Join us on Discord</a>
+              </div>
+            </div>
+          </div>
+          <div class="flex-grow"></div>
+          <div class="flex flex-col justify-center text-center p-2">
+            <span class="block font-bold text-primary text-4xl">28</span>
+            <span class="block mt-2">executives so far 🥳</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
     <script src="https://s.electerious.com/basicScroll/dist/basicScroll.min.js"></script>
     <script>
       // More information about this technique/pen:
