@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coming Soon | YEGYouth.Tech</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
       body {
@@ -62,12 +66,11 @@
         z-index: 1;
       }
       .title {
-        position: absolute;
         z-index: 0;
-        top: 15vh;
-        left: 50%;
-        transform: translateX(-50%) translateY(var(--translateY));
-        font-family: 'Poppins', sans-serif;
+        padding-top: 15vh;
+        text-align: center;
+        transform: translateY(var(--translateY));
+        font-family: "Poppins", sans-serif;
         font-weight: 700;
         font-size: clamp(20pt, 8vw, 80pt);
         color: rgba(255, 255, 255, 0.87);
@@ -82,10 +85,49 @@
           background-size: cover;
         }
         .title {
-            top: 30vh;
+          top: 30vh;
         }
       }
     </style>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
+      integrity="sha512-HaoDYc3PGduguBWOSToNc0AWGHBi2Y432Ssp3wNIdlOzrunCtB2qq6FrhtPbo+PlbvRbyi86dr5VQx61eg/daQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script defer>
+      SmoothScroll({
+        // Scrolling Core
+        animationTime: 800, // [ms]
+        stepSize: 100, // [px]
+
+        // Acceleration
+        accelerationDelta: 20, // 50
+        accelerationMax: 2, // 3
+
+        // Keyboard Settings
+        keyboardSupport: true, // option
+        arrowScroll: 200, // [px]
+
+        // Pulse (less tweakable)
+        // ratio of "tail" to "acceleration"
+        pulseAlgorithm: true,
+        pulseScale: 4,
+        pulseNormalize: 1,
+
+        // Other
+        touchpadSupport: true, // ignore touchpad by default
+        fixedBackground: true,
+        excluded: "",
+      });
+
+      new SmoothScroll('a[href*="#"]', {
+        speed: 2000,
+        speedAsDuration: true,
+      });
+    </script>
   </head>
   <body>
     <div class="parallax-container">
@@ -98,7 +140,9 @@
       <img class="scene" data-modifier="30" src="assets/output2.png" />
       <img class="scene" data-modifier="20" src="assets/output1.png" />
       <img class="scene" data-modifier="10" src="assets/output0.png" />
-      <h1 class="title" data-modifier="25">YEGYouth.Tech</h1>
+      <h1 class="title" data-modifier="25">
+        YEGYouth.Tech
+      </h1>
     </div>
     <script src="https://s.electerious.com/basicScroll/dist/basicScroll.min.js"></script>
     <script>
@@ -123,6 +167,9 @@
           })
           .start();
       });
+    </script>
+    <script>
+      AOS.init();
     </script>
   </body>
 </html>
