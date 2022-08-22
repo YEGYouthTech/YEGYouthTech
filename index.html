@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coming Soon | YEGYouth.Tech</title>
+    <style>
+      body {
+        background: black;
+        color: #ccee99;
+        text-align: center;
+      }
+
+      #wrap {
+        border: 0px solid #333;
+        width: 1920px;
+        height: 1080px;
+        margin: 0 auto;
+      }
+
+      #images img {
+        width: 100px;
+        height: auto;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.0/pixi.min.js"></script>
+  </head>
+  <body>
+    <div id="wrap"></div>
+    <script>
+      (w = 1920), (h = 1080);
+      var renderer = new PIXI.WebGLRenderer(w, h);
+      var cOutput = document.getElementById("wrap");
+      cOutput.appendChild(renderer.view);
+
+      var stage = new PIXI.Container();
+      var container = new PIXI.Container();
+      var foreground = new PIXI.Container();
+      stage.addChild(container);
+      stage.addChild(foreground);
+
+      var f;
+      var fg;
+      var mousex = w / 2,
+        mousey = h / 2;
+      var ploader = new PIXI.loaders.Loader();
+
+      function init() {
+        console.log("dasdsdasd");
+        ploader.add(
+          "fg",
+          "https://media.discordapp.net/attachments/926664011636961280/1011323126140915852/Edmonton-Canada-bridge-lights-night_1920x1200.jpg"
+        );
+        ploader.add(
+          "depth",
+          "https://media.discordapp.net/attachments/926664011636961280/1011323125675335761/Edmonton-Canada-bridge-lights-night_1920x1200.png"
+        );
+
+        ploader.once("complete", startMagic);
+        // Begin loading -
+        ploader.load();
+      }
+
+      function startMagic() {
+        fg = new PIXI.Sprite(ploader.resources.fg.texture);
+
+        foreground.addChild(fg);
+
+        d = new PIXI.Sprite(ploader.resources.depth.texture);
+        f = new PIXI.filters.DisplacementFilter(d, 0);
+        fg.filters = [f];
+        window.onmousemove = function (e) {
+          mousex = e.clientX;
+          mousey = e.clientY;
+        };
+        animate();
+      }
+
+      function animate() {
+        console.log("aaaaaaaaaa");
+        f.scale.x = (window.innerWidth / 2 - mousex) / 10;
+        f.scale.y = (window.innerHeight / 2 - mousey) / 10;
+        fg.addChild(d);
+        d.renderable = false;
+
+        renderer.render(stage);
+        requestAnimationFrame(animate);
+      }
+
+      // Start -
+      init();
+    </script>
+  </body>
+</html>
