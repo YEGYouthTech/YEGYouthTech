@@ -83,6 +83,14 @@ img {
     &>div {
         background-color: $background;
     }
+
+    p {
+        color: $low-opacity-primary-text;
+    }
+
+    dd {
+        color: $low-opacity-primary-text;
+    }
 }
 
 #call-to-action {

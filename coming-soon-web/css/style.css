@@ -76,6 +76,12 @@ img {
 #about-us > div {
   background-color: #1a1a1a;
 }
+#about-us p {
+  color: rgba(255, 255, 255, 0.5);
+}
+#about-us dd {
+  color: rgba(255, 255, 255, 0.5);
+}
 
 #call-to-action {
   background-color: #1a1a1a;
