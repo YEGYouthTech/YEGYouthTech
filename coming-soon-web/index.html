@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Coming Soon | YEGYouth.Tech</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.6.0/dist/full.css" rel="stylesheet" type="text/css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
+    integrity="sha512-HaoDYc3PGduguBWOSToNc0AWGHBi2Y432Ssp3wNIdlOzrunCtB2qq6FrhtPbo+PlbvRbyi86dr5VQx61eg/daQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <link rel="stylesheet" href="./css/style.css">
+
+  <script defer>
+    SmoothScroll({
+      // Scrolling Core
+      animationTime: 800, // [ms]
+      stepSize: 100, // [px]
+
+      // Acceleration
+      accelerationDelta: 20, // 50
+      accelerationMax: 2, // 3
+
+      // Keyboard Settings
+      keyboardSupport: true, // option
+      arrowScroll: 200, // [px]
+
+      // Pulse (less tweakable)
+      // ratio of "tail" to "acceleration"
+      pulseAlgorithm: true,
+      pulseScale: 4,
+      pulseNormalize: 1,
+
+      // Other
+      touchpadSupport: true, // ignore touchpad by default
+      fixedBackground: true,
+      excluded: "",
+    });
+
+    new SmoothScroll('a[href*="#"]', {
+      speed: 2000,
+      speedAsDuration: true,
+    });
+  </script>
+</head>
+
+<body>
+  <section id="hero" class="parallax-container">
+    <img class="scene" data-modifier="30" src="./assets/output-03.png" />
+    <img class="scene" data-modifier="20" src="./assets/output-02.png" />
+    <img class="scene" data-modifier="10" src="./assets/output-01.png" />
+
+    <h1 class="title" data-modifier="25">YEGYouth.Tech</h1>
+  </section>
+
+  <section id="countdown">
+    <div
+      class="flex-col max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+      <div class="grid grid-flow-col text-center auto-cols-max justify-center">
+        <div class="flex flex-col p-2 rounded-lg countdown-item">
+          <span class="countdown items-end text-5xl font-mono">
+            <span style="--value:15;"></span>d
+          </span>
+        </div>
+        <div class="flex flex-col p-2 rounded-lg countdown-item">
+          <span class="countdown items-end text-5xl font-mono">
+            <span style="--value:10;"></span>h
+          </span>
+        </div>
+        <div class="flex flex-col p-2 rounded-lg countdown-item">
+          <span class="countdown items-end text-5xl font-mono">
+            <span style="--value:24;"></span>m
+          </span>
+        </div>
+        <div class="flex flex-col p-2 rounded-lg countdown-item">
+          <span class="countdown items-end text-5xl font-mono">
+            <span style="--value:46;"></span>s
+          </span>
+        </div>
+      </div>
+      <p class="text-center mt-4 text-2xl">until launch</p>
+    </div>
+  </section>
+
+  <section id="about-us">
+    <div>
+      <div
+        class="max-w-2xl mx-auto py-24 px-4 flex items-center justify-center gap-y-16 gap-x-8 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8 lg:grid-cols-2">
+        <div class="max-w-2xl">
+          <h2 class="text-3xl font-bold tracking-tight text-white sm:tracking-tight sm:text-4xl" data-aos="fade-up">
+            Our
+            Mission</h2>
+          <p class="mt-4 text-gray-100" data-aos="fade-up">
+            YEGYouth.Tech is an organization focused on spreading technological awareness to youth around the city,
+            and
+            we think you might be interested in an executive position to expand the organization's computer science
+            expertise and reach across the city.
+          </p>
+
+          <dl class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
+            <div class="border-t border-gray-200 pt-4" data-aos="fade-up">
+              <dt class="font-medium text-gray-100">Specificity</dt>
+              <dd class="mt-2 text-sm text-gray-300">Our organization focuses on specific aspects of technology,
+                allowing for stronger impact.</dd>
+            </div>
+
+            <div class="border-t border-gray-200 pt-4" data-aos="fade-up">
+              <dt class="font-medium text-gray-100">Skill</dt>
+              <dd class="mt-2 text-sm text-gray-300">Our executive team members have won awards at Skills Canada,
+                CyberPatriot, PicoCTF, CalgaryHacks, and natHACKS.</dd>
+            </div>
+
+            <div class="border-t border-gray-200 pt-4" data-aos="fade-up">
+              <dt class="font-medium text-gray-100">Cooperation</dt>
+              <dd class="mt-2 text-sm text-gray-300">Establishing a strong presence at Old Scona Academic, Lillian
+                Osborne, and Archbishop MacDonald by bringing leaders together.</dd>
+            </div>
+
+            <div class="border-t border-gray-200 pt-4" data-aos="fade-up">
+              <dt class="font-medium text-gray-100">Impact</dt>
+              <dd class="mt-2 text-sm text-gray-300">All of our club meeting agendas, curriculums, and projects are
+                hand
+                crafted with care.</dd>
+            </div>
+
+            <div class="border-t border-gray-200 pt-4" data-aos="fade-up">
+              <dt class="font-medium text-gray-100">Not for profit</dt>
+              <dd class="mt-2 text-sm text-gray-300">100% of any revenue we make directly goes into funding future
+                events.</dd>
+            </div>
+
+            <div class="border-t border-gray-200 pt-4" data-aos="fade-up">
+              <dt class="font-medium text-gray-100">Relevance</dt>
+              <dd class="mt-2 text-sm text-gray-300">All YEGYouth.Tech projects are proudly made with love from your
+                city, Edmonton, Alberta ❤️</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="call-to-action" class="bg-gray-50 text-secondary">
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+      <div class="flex w-full">
+        <div>
+          <h2 class="text-3xl tracking-tight sm:text-4xl sm:tracking-tight">
+            <span class="block font-medium">Believe in our mission?</span>
+            <span class="block font-bold text-primary">Join the executive team.</span>
+          </h2>
+          <div class="mt-8 flex lg:flex-shrink-0">
+            <div class="inline-flex rounded-md shadow">
+              <a href="https://discord.gg/szjzhYkT9e"
+                class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md">Join
+                us on Discord</a>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="flex-grow"></div>
+        <div class="flex flex-col justify-center text-center p-2">
+          <span class="block font-bold text-primary text-4xl">28</span>
+          <span class="block mt-2">executives so far 🥳</span>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <script src="https://s.electerious.com/basicScroll/dist/basicScroll.min.js"></script>
+  <script>
+    // More information about this technique/pen:
+    // https://medium.com/@electerious/parallax-scrolling-with-js-controlled-css-variables-63cfe96820c7#.o1kkd4cte
+
+    document.querySelectorAll("[data-modifier]").forEach((elem) => {
+      const modifier = elem.getAttribute("data-modifier");
+
+      basicScroll
+        .create({
+          elem: elem,
+          from: 0,
+          to: window.innerHeight,
+          direct: true,
+          props: {
+            "--translateY": {
+              from: "0",
+              to: `${10 * modifier}px`,
+            },
+          },
+        })
+        .start();
+    });
+  </script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

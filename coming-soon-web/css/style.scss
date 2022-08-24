@@ -1,0 +1,109 @@
+$background: #1a1a1a;
+$background-secondary: rgba(240, 136, 76, 0.9);
+$primary-text: rgba(#fff, 0.87);
+$low-opacity-primary-text: rgba(#fff, 0.5);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: $background;
+}
+
+body {
+    height: 2000px;
+}
+
+img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.text-primary {
+    color: rgba(253, 239, 128, .92);
+}
+
+.text-secondary {
+    color: rgba(240, 136, 76, .87);
+}
+
+.parallax-container {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: $background;
+    position: relative;
+
+    .scene {
+        position: absolute;
+        width: 100%;
+        min-height: 70vh;
+        max-height: 80vh;
+        object-fit: cover;
+        transform: translateY(var(--translateY));
+        will-change: transform;
+        object-position: left;
+    }
+
+    .title {
+        z-index: 0;
+        padding-top: 15vh;
+        text-align: center;
+        transform: translateY(var(--translateY));
+        font-weight: 700;
+        font-size: clamp(20pt, 8vw, 80pt);
+        color: rgba(255, 255, 255, 0.87);
+        font-family: "Poppins", sans-serif;
+    }
+}
+
+#countdown {
+    background-color: $background;
+
+    .countdown {
+        color: $primary-text;
+    }
+
+    p {
+        color: $low-opacity-primary-text;
+    }
+}
+
+#about-us {
+    text-align: center;
+
+    &>div {
+        background-color: $background;
+    }
+}
+
+#call-to-action {
+    background-color: $background;
+    text-align: center;
+
+    .flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    a {
+        background: $background-secondary;
+        color: $background;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .title {
+        top: 30vh;
+    }
+}

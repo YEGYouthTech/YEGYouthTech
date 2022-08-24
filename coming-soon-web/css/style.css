@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #1a1a1a;
+}
+
+body {
+  height: 2000px;
+}
+
+img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.text-primary {
+  color: rgba(253, 239, 128, 0.92);
+}
+
+.text-secondary {
+  color: rgba(240, 136, 76, 0.87);
+}
+
+.parallax-container {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  position: relative;
+}
+.parallax-container .scene {
+  position: absolute;
+  width: 100%;
+  min-height: 70vh;
+  max-height: 80vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: translateY(var(--translateY));
+  will-change: transform;
+  -o-object-position: left;
+     object-position: left;
+}
+.parallax-container .title {
+  z-index: 0;
+  padding-top: 15vh;
+  text-align: center;
+  transform: translateY(var(--translateY));
+  font-weight: 700;
+  font-size: clamp(20pt, 8vw, 80pt);
+  color: rgba(255, 255, 255, 0.87);
+  font-family: "Poppins", sans-serif;
+}
+
+#countdown {
+  background-color: #1a1a1a;
+}
+#countdown .countdown {
+  color: rgba(255, 255, 255, 0.87);
+}
+#countdown p {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#about-us {
+  text-align: center;
+}
+#about-us > div {
+  background-color: #1a1a1a;
+}
+
+#call-to-action {
+  background-color: #1a1a1a;
+  text-align: center;
+}
+#call-to-action .flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#call-to-action a {
+  background: rgba(240, 136, 76, 0.9);
+  color: #1a1a1a;
+}
+
+@media screen and (max-width: 475px) {
+  .title {
+    top: 30vh;
+  }
+}/*# sourceMappingURL=style.css.map */
