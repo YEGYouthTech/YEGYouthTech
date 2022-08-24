@@ -45,12 +45,21 @@ img {
     .scene {
         position: absolute;
         width: 100%;
-        min-height: 70vh;
+        // min-height: 70vh;
         // max-height: 80vh;
+        height: 100vh;
         object-fit: cover;
         transform: translateY(var(--translateY));
         will-change: transform;
         object-position: bottom left;
+        transition: bottom .5s ease-out, opacity .5s ease-out !important;
+        bottom: calc(100px - 80vh);
+        opacity: 0;
+
+        &.aos-animate {
+            bottom: 0;
+            opacity: 1;
+        }
     }
 
     .title {
