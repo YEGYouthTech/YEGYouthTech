@@ -41,13 +41,12 @@ img {
   position: absolute;
   width: 100%;
   min-height: 70vh;
-  max-height: 80vh;
   -o-object-fit: cover;
      object-fit: cover;
   transform: translateY(var(--translateY));
   will-change: transform;
-  -o-object-position: left;
-     object-position: left;
+  -o-object-position: bottom left;
+     object-position: bottom left;
 }
 .parallax-container .title {
   z-index: 0;
