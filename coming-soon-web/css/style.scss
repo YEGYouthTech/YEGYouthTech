@@ -46,11 +46,13 @@ img {
         position: absolute;
         width: 100%;
         min-height: 70vh;
-        // max-height: 80vh;
+        max-height: 80vh;
         object-fit: cover;
         transform: translateY(var(--translateY));
         will-change: transform;
-        object-position: bottom left;
+        // object-position: bottom left;
+        object-position: left;
+        filter: brightness(50%);
     }
 
     .title {
