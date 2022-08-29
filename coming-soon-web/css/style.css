@@ -1,3 +1,25 @@
+@-webkit-keyframes floating-text {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes floating-text {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -40,13 +62,13 @@ img {
 .parallax-container .scene {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  max-height: 80vh;
   -o-object-fit: cover;
      object-fit: cover;
   transform: translateY(var(--translateY));
   will-change: transform;
-  -o-object-position: bottom left;
-     object-position: bottom left;
+  -o-object-position: left;
+     object-position: left;
   transition: bottom 0.5s ease-out, opacity 0.5s ease-out !important;
   bottom: calc(100px - 80vh);
   opacity: 0;
@@ -64,6 +86,8 @@ img {
   font-size: clamp(20pt, 8vw, 80pt);
   color: rgba(255, 255, 255, 0.87);
   font-family: "Poppins", sans-serif;
+  -webkit-animation: floating-text 5s infinite;
+          animation: floating-text 5s infinite;
 }
 
 #countdown {
