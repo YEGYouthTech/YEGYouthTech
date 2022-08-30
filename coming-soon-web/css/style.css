@@ -20,6 +20,58 @@
     transform: translateY(0);
   }
 }
+@-webkit-keyframes blob-morph {
+  0% {
+    border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+    transform: translateY(0);
+  }
+  20% {
+    border-radius: 60% 40% 40% 60%/60% 25% 75% 40%;
+    transform: translateY(0.3rem);
+  }
+  40% {
+    border-radius: 70% 30% 65% 35%/80% 45% 55% 20%;
+    transform: translateY(0.6rem);
+  }
+  60% {
+    border-radius: 30% 70% 70% 30%/20% 30% 70% 80%;
+    transform: translateY(0.9rem);
+  }
+  80% {
+    border-radius: 40% 60% 40% 60%/70% 55% 45% 30%;
+    transform: translateY(0.6rem);
+  }
+  100% {
+    border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+    transform: translateY(0.3rem);
+  }
+}
+@keyframes blob-morph {
+  0% {
+    border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+    transform: translateY(0);
+  }
+  20% {
+    border-radius: 60% 40% 40% 60%/60% 25% 75% 40%;
+    transform: translateY(0.3rem);
+  }
+  40% {
+    border-radius: 70% 30% 65% 35%/80% 45% 55% 20%;
+    transform: translateY(0.6rem);
+  }
+  60% {
+    border-radius: 30% 70% 70% 30%/20% 30% 70% 80%;
+    transform: translateY(0.9rem);
+  }
+  80% {
+    border-radius: 40% 60% 40% 60%/70% 55% 45% 30%;
+    transform: translateY(0.6rem);
+  }
+  100% {
+    border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+    transform: translateY(0.3rem);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -45,7 +97,7 @@ img {
 }
 
 .text-primary {
-  color: rgba(253, 239, 128, 0.92);
+  color: rgba(253, 239, 128, 0.87);
 }
 
 .text-secondary {
@@ -58,6 +110,20 @@ img {
   overflow: hidden;
   background-color: #1a1a1a;
   position: relative;
+}
+.parallax-container .blob {
+  filter: brightness(90%);
+  width: 11rem;
+  height: 11rem;
+  position: absolute;
+  background-image: linear-gradient(45deg, rgb(240, 136, 76) 0%, rgb(253, 239, 128) 100%);
+  box-shadow: 0 0 11rem 0 rgba(240, 136, 76, 0.7), 0 0 3rem 0 rgba(253, 239, 128, 0.7);
+  -webkit-animation: blob-morph 10s linear infinite;
+          animation: blob-morph 10s linear infinite;
+}
+.parallax-container .blob:nth-child(1) {
+  top: 5rem;
+  left: 21rem;
 }
 .parallax-container .scene {
   position: absolute;
@@ -102,6 +168,21 @@ img {
 
 #about-us {
   text-align: center;
+  position: relative;
+}
+#about-us .blob {
+  filter: brightness(90%);
+  width: 11rem;
+  height: 11rem;
+  position: absolute;
+  background-image: linear-gradient(45deg, rgb(240, 136, 76) 0%, rgb(253, 239, 128) 100%);
+  box-shadow: 0 0 11rem 0 rgba(240, 136, 76, 0.7), 0 0 3rem 0 rgba(253, 239, 128, 0.7);
+  -webkit-animation: blob-morph 10s linear infinite;
+          animation: blob-morph 10s linear infinite;
+}
+#about-us .blob:nth-child(1) {
+  top: 0;
+  left: 18rem;
 }
 #about-us > div {
   background-color: #1a1a1a;
