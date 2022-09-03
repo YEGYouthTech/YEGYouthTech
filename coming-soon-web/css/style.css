@@ -83,8 +83,7 @@ html {
   margin: 0;
   padding: 0;
   width: 100%;
-  background: radial-gradient(circle at center, #001358 0%, #010e42 100%);
-  overflow-x: hidden;
+  background-color: #1a1a1a;
 }
 
 body {
@@ -109,6 +108,7 @@ img {
   height: 100vh;
   width: 100%;
   overflow: hidden;
+  background-color: #1a1a1a;
   position: relative;
 }
 .parallax-container .blob {
@@ -143,32 +143,21 @@ img {
   bottom: 0;
   opacity: 1;
 }
-.parallax-container .title-mask {
-  padding-top: 15vh;
-  overflow: hidden;
-  transform: translateY(var(--translateY));
-  will-change: transform;
-}
-.parallax-container .title-mask .title {
+.parallax-container .title {
   z-index: 0;
+  padding-top: 15vh;
   text-align: center;
-  transform: translateY(100%);
+  transform: translateY(var(--translateY));
   font-weight: 700;
   font-size: clamp(20pt, 8vw, 80pt);
   color: rgba(255, 255, 255, 0.87);
   font-family: "Poppins", sans-serif;
   -webkit-animation: floating-text 5s infinite;
           animation: floating-text 5s infinite;
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out !important;
-  opacity: 0;
-}
-.parallax-container .title-mask.aos-animate .title {
-  opacity: 0.87;
-  transform: none;
 }
 
 #countdown {
-  background-color: transparent;
+  background-color: #1a1a1a;
 }
 #countdown .countdown {
   color: rgba(255, 255, 255, 0.87);
@@ -196,7 +185,7 @@ img {
   left: 18rem;
 }
 #about-us > div {
-  background-color: transparent;
+  background-color: #1a1a1a;
 }
 #about-us p {
   color: rgba(255, 255, 255, 0.5);
@@ -206,7 +195,7 @@ img {
 }
 
 #call-to-action {
-  background-color: transparent;
+  background-color: #1a1a1a;
   text-align: center;
 }
 #call-to-action .flex {

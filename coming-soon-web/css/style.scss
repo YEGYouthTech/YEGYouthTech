@@ -1,5 +1,4 @@
-// $background: rgba(26, 26, 26, 0.2);
-$background: transparent;
+$background: #1a1a1a;
 $background-secondary: rgba(240, 136, 76, 0.9);
 $primary-text: rgba(#fff, 0.87);
 $low-opacity-primary-text: rgba(#fff, 0.5);
@@ -63,8 +62,7 @@ html {
     margin: 0;
     padding: 0;
     width: 100%;
-    background: radial-gradient(circle at center, #001358 0%, #010e42 100%);
-    overflow-x: hidden;
+    background-color: $background;
 }
 
 body {
@@ -89,6 +87,7 @@ img {
     height: 100vh;
     width: 100%;
     overflow: hidden;
+    background-color: $background;
     position: relative;
 
     .blob {
@@ -126,29 +125,16 @@ img {
         }
     }
 
-    .title-mask {
+    .title {
+        z-index: 0;
         padding-top: 15vh;
-        overflow: hidden;
+        text-align: center;
         transform: translateY(var(--translateY));
-        will-change: transform;
-
-        .title {
-            z-index: 0;
-            text-align: center;
-            transform: translateY(100%);
-            font-weight: 700;
-            font-size: clamp(20pt, 8vw, 80pt);
-            color: rgba(255, 255, 255, 0.87);
-            font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-size: clamp(20pt, 8vw, 80pt);
+        color: rgba(255, 255, 255, 0.87);
+        font-family: "Poppins", sans-serif;
         animation: floating-text 5s infinite;
-            transition: opacity .5s ease-out, transform .5s ease-out !important;
-            opacity: 0;
-        }
-
-        &.aos-animate .title {
-            opacity: .87;
-            transform: none;
-        }
     }
 }
 
@@ -209,7 +195,7 @@ img {
 
     a {
         background: $background-secondary;
-        color: #1a1a1a;
+        color: $background;
     }
 }
 
