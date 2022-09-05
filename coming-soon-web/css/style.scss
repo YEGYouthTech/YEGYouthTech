@@ -11,7 +11,7 @@ $text-orange: rgb(240, 136, 76);
     }
 
     50% {
-        transform: translateY(0.5rem);
+        transform: translateY(1rem);
     }
 
     100% {
@@ -73,6 +73,13 @@ img {
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+hr {
+    margin: 3rem auto 1rem;
+    width: 5rem;
+    border: none;
+    border-bottom: 0.6rem dotted $low-opacity-primary-text;
 }
 
 .text-primary {
