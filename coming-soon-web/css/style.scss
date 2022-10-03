@@ -11,7 +11,7 @@ $text-orange: rgb(240, 136, 76);
     }
 
     50% {
-        transform: translateY(1rem);
+        transform: translateY(-1rem);
     }
 
     100% {
@@ -65,10 +65,6 @@ html {
     background-color: $background;
 }
 
-body {
-    height: 2000px;
-}
-
 img {
     position: absolute;
     bottom: 0;
@@ -96,6 +92,10 @@ hr {
     overflow: hidden;
     background-color: $background;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     .blob {
         filter: brightness(90%);
@@ -115,16 +115,17 @@ hr {
     .scene {
         position: absolute;
         width: 100%;
-        // height: 100vh;
-        // min-height: 70vh;
-        max-height: 80vh;
+        height: 100vh;
+        min-height: 70vh;
+        // max-height: 80vh;
         object-fit: cover;
         transform: translateY(var(--translateY));
         will-change: transform;
-        object-position: left;
+        object-position: bottom left;
         transition: bottom .5s ease-out, opacity .5s ease-out !important;
         bottom: calc(100px - 80vh);
         opacity: 0;
+        filter: brightness(60%);
 
         &.aos-animate {
             bottom: 0;
@@ -132,24 +133,59 @@ hr {
         }
     }
 
-    .title {
+    .title,
+    .description,
+    .scroll-indicator {
         z-index: 0;
-        padding-top: 15vh;
         text-align: center;
-        transform: translateY(var(--translateY));
-        font-weight: 700;
-        font-size: clamp(20pt, 8vw, 80pt);
-        color: rgba(255, 255, 255, 0.87);
         font-family: "Poppins", sans-serif;
+        color: $primary-text;
+        max-width: 90%;
+    }
+
+    .title, span {
+        line-height: 9rem;
+    }
+
+    .title {
+        font-weight: 700;
+        font-size: 9rem;
         animation: floating-text 5s infinite;
+        background: -webkit-linear-gradient(#34d399, #0ea5e9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        span {
+            display: inline-block;
+        }
+    }
+
+    .description {
+        margin-top: 6rem;
+        font-weight: 600;
+        font-size: 2.5rem;
+    }
+
+    .scroll-indicator {
+        position: absolute;
+        bottom: 2.5rem;
+        color: $low-opacity-primary-text;
+        font-weight: 500;
+
+        i {
+            margin-right: 0.5rem;
+        }
     }
 }
 
 #countdown {
     background-color: $background;
+    max-width: 90%;
+    margin: auto;
 
     .countdown {
         color: $primary-text;
+        font-size: 3rem;
     }
 
     p {
@@ -206,8 +242,166 @@ hr {
     }
 }
 
-@media screen and (max-width: 475px) {
-    .title {
-        top: 30vh;
+@media (max-width: 1024px) {
+    .parallax-container {
+        .scene {
+            filter: brightness(40%);
+        }
+
+        .title,
+        span {
+            line-height: 7.5rem;
+        }
+
+        .title {
+            font-size: 8rem;
+
+            span {
+                display: block;
+            }
+        }
+
+        .description {
+            margin-top: 4rem;
+            line-height: 3.3rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .parallax-container {
+        .scene {
+            filter: brightness(40%);
+        }
+
+        .title,
+        span {
+            line-height: 6rem;
+        }
+
+        .title {
+            font-size: 6.6rem;
+
+            span {
+                display: block;
+            }
+        }
+
+        .description {
+            line-height: 2.8rem;
+            font-size: 2.1rem;
+        }
+    }
+
+    #about-us {
+        max-width: 90%;
+        margin: auto;
+
+        .about-container {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+    }
+
+    #call-to-action {
+        span {
+            &:nth-child(1) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .parallax-container {
+        .scene {
+            filter: brightness(40%);
+        }
+
+        .title,
+        span {
+            line-height: 4rem;
+        }
+
+        .title {
+            font-size: 4.2rem;
+
+            span {
+                display: block;
+            }
+        }
+
+        .description {
+            line-height: 2.8rem;
+            font-size: 1.8rem;
+        }
+    }
+
+    #countdown {
+        .countdown {
+            font-size: 2.2rem;
+        }
+    }
+
+    #about-us {
+        .about-container {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+    }
+
+    #call-to-action {
+        span {
+            &:nth-child(1) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .parallax-container {
+        .scene {
+            filter: brightness(40%);
+        }
+
+        .title,
+        span {
+            line-height: 4rem;
+        }
+
+        .title {
+            font-size: 3.6rem;
+
+            span {
+                display: block;
+            }
+        }
+
+        .description {
+            line-height: 2.8rem;
+            font-size: 1.8rem;
+        }
+    }
+
+    #countdown {
+        .countdown {
+            font-size: 2.2rem;
+        }
+    }
+
+    #about-us {
+        .about-container {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+    }
+
+    #call-to-action {
+        span {
+            &:nth-child(1) {
+                margin-bottom: 1rem;
+            }
+        }
     }
 }

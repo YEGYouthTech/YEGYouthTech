@@ -3,7 +3,7 @@ const hoursDisplay = document.querySelector(".hours");
 const minutesDisplay = document.querySelector(".minutes");
 const secondsDisplay = document.querySelector(".seconds");
 
-const endTime = new Date("Sept 26, 2022 00:00:00").getTime();
+const endTime = new Date("October 11, 2022 00:00:00").getTime();
 
 let timeLeft;
 

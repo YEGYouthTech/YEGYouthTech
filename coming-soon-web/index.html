@@ -8,9 +8,10 @@
 
   <title>Coming Soon | YEGYouth.Tech</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/daisyui@2.6.0/dist/full.css" rel="stylesheet" type="text/css" />
@@ -57,8 +58,7 @@
 
 <body>
   <section id="hero" class="parallax-container">
-    <div class="blob"></div>
-
+    <!-- <div class="blob"></div> -->
     <img class="scene" data-modifier="30" src="./assets/output-03.png" style="transition-delay: 400ms !important;"
       data-aos data-aos-anchor-placement="top-bottom" />
     <img class="scene" data-modifier="20" src="./assets/output-02.png" style="transition-delay: 300ms !important;"
@@ -66,7 +66,10 @@
     <img class="scene" data-modifier="10" src="./assets/output-01.png" style="transition-delay: 200ms !important;"
       data-aos data-aos-anchor-placement="top-bottom" />
 
-    <h1 class="title" data-modifier="25">YEGYouth.Tech</h1>
+    <h1 class="title" data-modifier="25">YEGYouth<span>.Tech</span></h1>
+    <p class="description" data-modifier="25">Edmonton Youth Technology Organization</p>
+
+    <span class="scroll-indicator"><i class="fa-sharp fa-solid fa-chevron-down"></i> Scroll Down</span>
   </section>
 
   <section id="countdown">
@@ -101,7 +104,7 @@
   <section id="about-us">
     <div>
       <div
-        class="max-w-2xl mx-auto py-24 px-4 flex items-center justify-center gap-y-16 gap-x-8 sm:px-6 sm:py-8 lg:max-w-7xl lg:px-8 lg:grid-cols-2">
+        class="max-w-2xl mx-auto py-24 px-4 flex items-center justify-center gap-y-16 gap-x-8 sm:px-6 sm:py-8 lg:max-w-7xl lg:px-8 lg:grid-cols-2 about-container">
         <div class="max-w-2xl">
           <h2 class="text-3xl font-bold tracking-tight text-white sm:tracking-tight sm:text-4xl" data-aos="fade-up">
             Our
@@ -206,6 +209,7 @@
     AOS.init();
   </script>
   <script src="./js/countdown.js"></script>
+  <script src="https://kit.fontawesome.com/661b14556a.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
