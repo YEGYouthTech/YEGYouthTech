@@ -161,7 +161,8 @@ hr {
   color: rgba(255, 255, 255, 0.87);
   max-width: 90%;
 }
-.parallax-container .title, .parallax-container span {
+.parallax-container .title,
+.parallax-container span {
   line-height: 9rem;
 }
 .parallax-container .title {
@@ -191,20 +192,8 @@ hr {
   margin-right: 0.5rem;
 }
 
-#countdown {
-  background-color: #1a1a1a;
-  max-width: 90%;
-  margin: auto;
-}
-#countdown .countdown {
-  color: rgba(255, 255, 255, 0.87);
-  font-size: 3rem;
-}
-#countdown p {
-  color: rgba(255, 255, 255, 0.5);
-}
-
 #about-us {
+  margin-top: 3rem;
   text-align: center;
   position: relative;
 }

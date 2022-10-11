@@ -143,7 +143,8 @@ hr {
         max-width: 90%;
     }
 
-    .title, span {
+    .title,
+    span {
         line-height: 9rem;
     }
 
@@ -178,22 +179,23 @@ hr {
     }
 }
 
-#countdown {
-    background-color: $background;
-    max-width: 90%;
-    margin: auto;
+// #countdown {
+//     background-color: $background;
+//     max-width: 90%;
+//     margin: auto;
 
-    .countdown {
-        color: $primary-text;
-        font-size: 3rem;
-    }
+//     .countdown {
+//         color: $primary-text;
+//         font-size: 3rem;
+//     }
 
-    p {
-        color: $low-opacity-primary-text;
-    }
-}
+//     p {
+//         color: $low-opacity-primary-text;
+//     }
+// }
 
 #about-us {
+    margin-top: 3rem;
     text-align: center;
     position: relative;
 
